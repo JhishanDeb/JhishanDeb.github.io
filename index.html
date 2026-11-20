@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jhishan Deb · NLP &amp; LLM Researcher</title>
+<meta name="description" content="Jhishan Deb is a Computer Science graduate from BRAC University researching NLP, large language models (LLMs) and retrieval-augmented generation (RAG), with a focus on how LLMs use retrieved evidence and how to evaluate that use reliably.">
+<meta name="author" content="Jhishan Deb">
+<meta name="keywords" content="Jhishan Deb, NLP, LLM, RAG, BioNLP, large language models, retrieval-augmented generation, BRAC University, machine learning research">
+<link rel="canonical" href="https://jhishandeb.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Jhishan Deb · NLP &amp; LLM Researcher">
+<meta property="og:description" content="Research on how LLMs use retrieved evidence, and how to evaluate that use reliably.">
+<meta property="og:url" content="https://jhishandeb.github.io/">
+<meta property="og:image" content="https://jhishandeb.github.io/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3a68'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='white' text-anchor='middle'%3EJD%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jhishan Deb",
+  "url": "https://jhishandeb.github.io/",
+  "image": "https://jhishandeb.github.io/assets/jhishan-deb.jpg",
+  "email": "mailto:jhishandeb2002@gmail.com",
+  "jobTitle": "NLP and LLM Researcher",
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "BRAC University"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD"},
+  "knowsAbout": ["Natural Language Processing", "Large Language Models", "Retrieval-Augmented Generation", "Biomedical NLP", "LLM Evaluation"],
+  "sameAs": ["https://github.com/JhishanDeb", "https://www.linkedin.com/in/jhishan-deb"]
+}
+</script>
+
+<style>
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --text: #1c1f24;
+  --muted: #5d6470;
+  --line: #e6e2da;
+  --accent: #1f3a68;
+  --accent-soft: #e9eef7;
+  --chip: #f1efe9;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12151b; --surface: #181c24; --text: #e7e9ee; --muted: #9aa3b2;
+    --line: #2a303b; --accent: #8fb3ff; --accent-soft: #1f2a40; --chip: #222833;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12151b; --surface: #181c24; --text: #e7e9ee; --muted: #9aa3b2;
+  --line: #2a303b; --accent: #8fb3ff; --accent-soft: #1f2a40; --chip: #222833;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--sans); font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+/* nav */
+header.nav {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+header.nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 12px; }
+.brand { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; color: var(--text); white-space: nowrap; }
+.brand:hover { text-decoration: none; }
+nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; }
+nav a { color: var(--muted); font-size: .92rem; font-weight: 500; }
+nav a:hover { color: var(--text); text-decoration: none; }
+.theme-btn {
+  border: 1px solid var(--line); background: var(--surface); color: var(--muted);
+  width: 34px; height: 34px; border-radius: 8px; cursor: pointer; display: grid; place-items: center;
+}
+.theme-btn:hover { color: var(--text); }
+.nav-right { display: flex; align-items: center; gap: 18px; }
+@media (max-width: 760px) { nav { display: none; } }
+
+/* hero */
+.hero { display: grid; grid-template-columns: 1fr 230px; gap: 48px; align-items: start; padding: 64px 0 40px; }
+.hero h1 { font-family: var(--serif); font-size: 2.6rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -.01em; }
+.tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 22px; }
+.hero p { margin: 0 0 14px; }
+.photo {
+  display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12); background: #111;
+}
+.status {
+  display: inline-flex; gap: 8px; align-items: center; margin: 4px 0 18px;
+  background: var(--accent-soft); color: var(--accent); border-radius: 999px;
+  padding: 5px 14px; font-size: .88rem; font-weight: 500;
+}
+.status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px;
+  border: 1px solid var(--line); border-radius: 9px; background: var(--surface);
+  color: var(--text); font-size: .9rem; font-weight: 500;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn.primary:hover { color: var(--bg); opacity: .9; }
+.btn svg { width: 16px; height: 16px; flex: none; }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 36px; }
+  .hero figure { order: -1; width: 150px; }
+  .hero h1 { font-size: 2.1rem; }
+}
+figure { margin: 0; }
+
+/* sections */
+section { padding: 34px 0; border-top: 1px solid var(--line); }
+h2 { font-family: var(--serif); font-size: 1.55rem; margin: 0 0 20px; }
+h3 { font-size: 1.02rem; margin: 0; line-height: 1.4; }
+.muted { color: var(--muted); }
+.interests { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.chip { background: var(--chip); border-radius: 6px; padding: 3px 10px; font-size: .84rem; color: var(--text); }
+
+/* news */
+.news { list-style: none; margin: 0; padding: 0; }
+.news li { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: 7px 0; }
+.news time { color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; padding-top: 1px; }
+
+/* pubs */
+.pub { padding: 14px 0; }
+.pub + .pub { border-top: 1px dashed var(--line); }
+.pub-title { font-weight: 600; font-family: var(--serif); font-size: 1.08rem; line-height: 1.4; }
+.pub-meta { color: var(--muted); font-size: .93rem; }
+.pub-meta b { color: var(--text); font-weight: 600; }
+.badge { display: inline-block; font-size: .74rem; font-weight: 600; letter-spacing: .02em; text-transform: uppercase;
+  color: var(--accent); background: var(--accent-soft); border-radius: 5px; padding: 1px 8px; margin-right: 6px; vertical-align: 2px; }
+
+/* research cards */
+.item { padding: 18px 0; }
+.item + .item { border-top: 1px dashed var(--line); }
+.item-head { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+.item-date { color: var(--muted); font-size: .9rem; white-space: nowrap; }
+.item-sub { color: var(--muted); font-size: .92rem; margin: 2px 0 8px; font-style: italic; }
+.item ul { margin: 6px 0 0; padding-left: 20px; }
+.item li { margin: 4px 0; }
+.tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.tools .chip { font-size: .78rem; padding: 2px 8px; }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+.card h3 { margin-bottom: 6px; }
+.card p { margin: 0 0 10px; font-size: .95rem; }
+.card .repo { font-size: .88rem; display: inline-flex; gap: 6px; align-items: center; }
+.stat { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: var(--accent); line-height: 1.2; }
+
+.edu-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 6px 0; }
+dl.skills { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; margin: 0; }
+dl.skills dt { font-weight: 600; font-size: .95rem; }
+dl.skills dd { margin: 0; color: var(--muted); font-size: .95rem; }
+@media (max-width: 600px) { dl.skills { grid-template-columns: 1fr; gap: 2px; } dl.skills dd { margin-bottom: 10px; } }
+
+ul.plain { margin: 0; padding-left: 20px; }
+ul.plain li { margin: 4px 0; }
+
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: .88rem; }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Jhishan Deb</a>
+    <div class="nav-right">
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#manuscripts">Manuscripts</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="hero">
+    <div>
+      <h1>Jhishan Deb</h1>
+      <p class="tagline">NLP &amp; LLM Researcher · B.Sc. in Computer Science, BRAC University</p>
+      <span class="status">Applying to thesis-based M.Sc. and Ph.D. programs in CS</span>
+      <p>
+        I study <strong>how large language models use retrieved evidence</strong>, and how to measure that use
+        reliably. My work sits at the intersection of natural language processing, retrieval-augmented generation (RAG)
+        and biomedical NLP, where a model that sounds right but reads the evidence wrong can do real harm.
+      </p>
+      <p>
+        I build careful evaluation pipelines: pre-registered studies, placebo controls, leakage checks and
+        automated verification of every reported number. I have run 7B–32B open-weight models on modest GPUs and
+        scored over 1.3 million prompts with vLLM. I am currently writing two sole-author papers for ACL 2027.
+        My long-term goal is to become a research scientist working on trustworthy, evidence-grounded language models.
+      </p>
+      <div class="interests" aria-label="Research interests">
+        <span class="chip">Natural Language Processing</span>
+        <span class="chip">Large Language Models</span>
+        <span class="chip">Retrieval-Augmented Generation</span>
+        <span class="chip">Biomedical NLP</span>
+        <span class="chip">LLM Evaluation</span>
+      </div>
+      <div class="links">
+        <a class="btn primary" href="cv/Jhishan_Deb_CV.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          CV (PDF)
+        </a>
+        <a class="btn" href="mailto:jhishandeb2002@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          Email
+        </a>
+        <a class="btn" href="https://github.com/JhishanDeb" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+          GitHub
+        </a>
+        <a class="btn" href="https://www.linkedin.com/in/jhishan-deb" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <figure>
+      <img class="photo" src="assets/jhishan-deb.jpg" alt="Portrait of Jhishan Deb" width="560" height="700">
+    </figure>
+  </div>
+
+  <section id="news" aria-labelledby="news-h">
+    <h2 id="news-h">News</h2>
+    <ul class="news">
+      <li><time>Nov 2026</time><span>Applying to thesis-based M.Sc. programs in Canada and Ph.D. programs in the USA in Computer Science, focusing on NLP and LLMs.</span></li>
+      <li><time>Oct 2026</time><span>Started a series of pre-registered studies on how open-weight LLMs use a clinical risk model's SHAP explanations (17 checkpoints, 1.3M+ prompts).</span></li>
+      <li><time>2026</time><span>Two sole-author manuscripts in preparation for <strong>ACL 2027</strong>.</span></li>
+      <li><time>Feb 2026</time><span>Graduated with a B.Sc. in Computer Science from BRAC University (CGPA 3.88/4.00).</span></li>
+    </ul>
+  </section>
+
+  <section id="manuscripts" aria-labelledby="ms-h">
+    <h2 id="ms-h">Manuscripts in Preparation</h2>
+    <div class="pub">
+      <div class="pub-title">Which Way Do Open-Weight LLMs Follow a Clinical Risk Model's Explanation? Answer Priors and Baselines Make It Hard to Measure</div>
+      <div class="pub-meta"><span class="badge">ACL 2027</span><b>Jhishan Deb</b> · In preparation</div>
+    </div>
+    <div class="pub">
+      <div class="pub-title">Where Does the Evidence Go? Tracing Literature from Papers to Open-LLM Genetic Variant Classifications</div>
+      <div class="pub-meta"><span class="badge">ACL 2027</span><b>Jhishan Deb</b> · In preparation</div>
+    </div>
+  </section>
+
+  <section id="research" aria-labelledby="res-h">
+    <h2 id="res-h">Research</h2>
+
+    <article class="item">
+      <div class="item-head">
+        <h3>Evidence-Grounded LLMs for Genetic Variant Interpretation</h3>
+        <span class="item-date">2026 – Present</span>
+      </div>
+      <div class="item-sub">Independent research, sole author · Manuscript "Where Does the Evidence Go?"</div>
+      <ul>
+        <li>Built a benchmark of <strong>13,500 ClinGen expert variant classifications</strong>, rebuilding each one's evidence as of its decision date from 38 archived ClinVar releases (6.2 GB), gnomAD, eight predictor scores and PubTator3 literature. The test set holds 3,781 variants approved after the models' release.</li>
+        <li>Designed a two-stage RAG system: an ACMG/AMP rule engine plus an LLM reader that cites a PMID and a quote for each evidence criterion. Quotes are verified against the source; invented quotes fell from 5.7% (7B) to 0.6% (32B).</li>
+        <li>Five open LLMs (7B–32B, fp16 and 4-bit NF4) scored <strong>below</strong> a rule engine and a logistic regression on the same evidence (0.520–0.571 vs. 0.664 and 0.751 balanced accuracy). Found two routes by which retrieved context leaks the experts' answer.</li>
+        <li>A placebo-controlled decomposition showed that claims shuffled across variants of the same expert panel recover most of the LLM readers' small gain, so that gain is largely not specific to the variant.</li>
+      </ul>
+      <div class="tools"><span class="chip">Qwen2.5</span><span class="chip">Llama 3.1</span><span class="chip">Phi-4</span><span class="chip">Transformers</span><span class="chip">bitsandbytes</span><span class="chip">ClinGen</span><span class="chip">ClinVar</span><span class="chip">PubTator3</span></div>
+    </article>
+
+    <article class="item">
+      <div class="item-head">
+        <h3>Evidence Reliance of LLMs in Clinical Risk Prediction</h3>
+        <span class="item-date">Oct 2026 – Present</span>
+      </div>
+      <div class="item-sub">Independent research, sole author · Manuscript "Which Way Do Open-Weight LLMs Follow…"</div>
+      <ul>
+        <li>Built a vLLM log-probability harness and ran <strong>five sequential pre-registered studies</strong> on whether LLMs follow a clinical risk model's SHAP explanation differently when it points toward alarm or safety: over 1.3 million prompts, 17 open-weight checkpoints (4B–32B, eight families), three clinical datasets.</li>
+        <li>The registered alarm-deference hypothesis was refuted; a placebo explanation moved the models' answer prior toward "No" in 13 of 14 settings, so the measured direction depends on the baseline.</li>
+        <li>Found that larger Qwen3 models open their answers with Markdown bold, which silently breaks single-token probability reading; designed a two-step reading that recovers them at almost no cost by reusing the prefix cache.</li>
+        <li>Protocols tagged on GitHub before each study, SHA-256 checks on every run, and 248 automated checks of the paper's numbers.</li>
+      </ul>
+      <div class="tools"><span class="chip">vLLM</span><span class="chip">Qwen3</span><span class="chip">Llama 3.1</span><span class="chip">Olmo 3</span><span class="chip">XGBoost</span><span class="chip">SHAP</span><span class="chip">PhysioNet</span></div>
+    </article>
+
+    <article class="item">
+      <div class="item-head">
+        <h3>SVBERT: Structural Variant Refinement with a Genomic Language Model</h3>
+        <span class="item-date">2025 – 2026</span>
+      </div>
+      <div class="item-sub">Undergraduate thesis, BRAC University (team of four)</div>
+      <ul>
+        <li>Led the literature review and designed the pipeline for SVBERT, which refines long-read structural-variant calls by fusing LoRA-tuned DNABERT-2 embeddings with a CNN over strand-aware alignment features through cross-attention.</li>
+        <li>Highest deletion F1 among five methods on GIAB HG002 Nanopore (<strong>0.941</strong>) and PacBio CLR (<strong>0.938</strong>); best average F1 across five variant types on a simulated benchmark (0.88 vs. 0.83).</li>
+      </ul>
+      <div class="tools"><span class="chip">PyTorch</span><span class="chip">DNABERT-2</span><span class="chip">LoRA</span><span class="chip">Ray Tune</span></div>
+    </article>
+  </section>
+
+  <section id="projects" aria-labelledby="proj-h">
+    <h2 id="proj-h">Selected Projects</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>Confidence Signals for Medical Question Answering</h3>
+        <p class="muted">Pre-registered comparison of stated confidence, option probability and sample agreement as error signals for three 7–8B LLMs on all 1,273 MedQA (USMLE) test questions.</p>
+        <div class="stat">AUROC 0.52–0.65</div>
+        <p class="muted" style="font-size:.88rem">Stated confidence was the weakest signal in every model.</p>
+        <a class="repo" href="https://github.com/JhishanDeb/medqa-confidence" target="_blank" rel="noopener">github.com/JhishanDeb/medqa-confidence →</a>
+      </div>
+      <div class="card">
+        <h3>Tokenization Cost of Bangla across LLMs</h3>
+        <p class="muted">Measured Bangla's token cost on FLORES-200 across five tokenizers, updating Petrov et al. (NeurIPS 2023).</p>
+        <div class="stat">2.7–5.8× more tokens</div>
+        <p class="muted" style="font-size:.88rem">than English in Gemma 2, Qwen 2.5 and Llama 3.1, losing up to 83% of the context window.</p>
+        <a class="repo" href="https://github.com/JhishanDeb/bangla-token-tax" target="_blank" rel="noopener">github.com/JhishanDeb/bangla-token-tax →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" aria-labelledby="edu-h">
+    <h2 id="edu-h">Education</h2>
+    <div class="edu-row">
+      <div>
+        <h3>B.Sc. in Computer Science, BRAC University</h3>
+        <div class="muted">CGPA 3.88 / 4.00 · Dhaka, Bangladesh</div>
+        <div class="muted" style="font-size:.93rem">Thesis: Structural Variant Analysis in Human Genome using Transformer-based Genomic Language Model</div>
+      </div>
+      <span class="item-date">Jun 2022 – Feb 2026</span>
+    </div>
+    <div class="edu-row">
+      <div>
+        <h3>HSC, Govt. City College, Chittagong · SSC, Chittagong Govt. High School</h3>
+        <div class="muted">GPA 5.00 / 5.00 in both</div>
+      </div>
+      <span class="item-date">2020, 2018</span>
+    </div>
+    <div class="edu-row">
+      <div><h3>IELTS Academic</h3><div class="muted">Overall Band 7.0</div></div>
+      <span class="item-date">2026</span>
+    </div>
+  </section>
+
+  <section id="skills" aria-labelledby="skills-h">
+    <h2 id="skills-h">Skills</h2>
+    <dl class="skills">
+      <dt>LLM &amp; NLP</dt><dd>vLLM, Hugging Face Transformers, PEFT (LoRA), bitsandbytes (NF4), AWQ, RAG, prompt engineering</dd>
+      <dt>Machine Learning</dt><dd>PyTorch, scikit-learn, XGBoost, SHAP, ESM-2, DNABERT-2, Ray Tune</dd>
+      <dt>Research Methods</dt><dd>Pre-registration, placebo controls, ablations, LLM-as-a-judge, bootstrap CIs, DeLong test, Holm correction, calibration (ECE)</dd>
+      <dt>Languages &amp; Tools</dt><dd>Python, Java, SQL, pandas, NumPy, Git, Jupyter, Kaggle</dd>
+    </dl>
+  </section>
+
+  <section id="awards" aria-labelledby="aw-h">
+    <h2 id="aw-h">Honors &amp; Awards</h2>
+    <ul class="plain">
+      <li><strong>1st Runner-up</strong>, Next Gen Ideathon, an inter-university research and innovation competition</li>
+      <li><strong>Finalist</strong>, BRAC University Thesis Poster Exhibition</li>
+      <li><strong>25% merit-based scholarship</strong>, BRAC University</li>
+    </ul>
+  </section>
+
+  <section id="contact" aria-labelledby="ct-h">
+    <h2 id="ct-h">Contact</h2>
+    <p>I am happy to talk about research in NLP, LLM evaluation and RAG, and about graduate research opportunities.
+      The best way to reach me is by email at <a href="mailto:jhishandeb2002@gmail.com">jhishandeb2002@gmail.com</a>.</p>
+    <p class="muted">Based in Dhaka, Bangladesh · <a href="https://github.com/JhishanDeb" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/jhishan-deb" target="_blank" rel="noopener">LinkedIn</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Jhishan Deb</span>
+    <span>Last updated November 2026</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var root = document.documentElement, btn = document.getElementById('themeBtn');
+  try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch (e) {}
+  btn.addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
